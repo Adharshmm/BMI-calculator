@@ -1,0 +1,199 @@
+*{
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+.navbar-toggler {
+    border-color: white; 
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-width='2' d='M1 2.75h14M1 8h14M1 13.25h14'/%3E%3C/svg%3E");
+}
+.navbar-brand span{
+    font-weight: bold;
+    color: #0092ca;
+}
+body{
+  background: black !important;
+  height: auto;
+}
+.radio-inputs {
+    position: relative;
+    display: flex;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: bold;
+    width: 90%;
+    padding: 1rem 1rem 0 1rem;
+  }
+  
+  .radio-inputs .radio input {
+    display: none;
+  }
+  
+  .radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    color: grey;
+    transition: all 0.15s ease-in-out;
+    position: relative;
+  }
+  
+  .radio-inputs .radio input:checked + .name {
+    background-color: #e8e8e8;
+    font-weight: 600;
+  }
+  .radio-inputs .radio input + .name:hover {
+    color: #fff;
+  }
+  .radio-inputs .radio input:checked + .name:hover {
+    color: black;
+  }
+  .radio-inputs .radio input:checked + .name {
+    color: #1d1d29;
+  }
+  
+  
+  
+  .radio-inputs .radio input:checked + .name::after {
+    right: -10px;
+    border-bottom-left-radius: 300px;
+    box-shadow: -3px 3px 0px 3px #e8e8e8;
+    color: #1d1d29;
+  }
+  .radio-inputs .radio input:checked + .name::before {
+    left: -10px;
+    border-bottom-right-radius: 300px;
+    box-shadow: 3px 3px 0px 3px #e8e8e8;
+    color: #1d1d29;
+  }
+  i{
+    margin-right: 5px;
+  }
+  .form-range{
+    width: 500px !important;
+  }
+
+  .contain{
+    box-sizing:content-box;
+    width: 500px;
+    padding-left:22px ;
+  }
+  .height_display{
+    color: #eeeeee; ;
+  }
+  #height_display{
+    box-shadow: 0px 3px 1px -1px #0092ca;
+  }
+  #weight_display{
+    box-shadow: 0px 3px 1px -1px #0092ca;
+  }
+  .height_display span{
+    box-shadow: 0px 3px 1px -1px #0092ca;
+    
+    font-weight: bolder;
+  }
+
+  #customRange2::-webkit-slider-thumb {
+    background-color: #0092ca; /* For Chrome, Safari, etc. */
+  }
+  #customRange2::-moz-range-thumb {
+    background-color: #0092ca; /* For Firefox */
+  }
+  #customRange2::-ms-thumb {
+    background-color: #0092ca; /* For IE/Edge */
+  }
+  #customRange1::-webkit-slider-thumb {
+    background-color: #0092ca; /* For Chrome, Safari, etc. */
+  }
+  #customRange1::-moz-range-thumb {
+    background-color: #0092ca; /* For Firefox */
+  }
+  #customRange1::-ms-thumb {
+    background-color: #0092ca; /* For IE/Edge */
+  }
+  .button_container button{
+    border: 0;
+    outline: none;
+    background: #0092ca;
+    font-weight: bold;
+    color: white;
+    padding: 6px;
+    border-radius: 5px;
+    transition: padding 0.3s ease;
+  }
+  .bmi_display{
+    font-weight: bolder;
+    color: black;
+    box-shadow: 0px 4px 1px -1px #0092ca;
+  }
+  .condition{
+    font-weight: 600;
+    box-shadow: 0px 4px 1px -1px white;
+  }
+  .gymImg{
+    width: 700px;
+    height: 700px;
+    padding-left: 20px;
+  }
+  .calcu_btn:hover{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .calcu_btn:active{
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+
+  
+
+  @media (max-width: 1200px) {
+  /* Adjustments for screens up to 1200px wide */
+  .container {
+    flex-direction: column-reverse; 
+  }
+  .gymImg {
+    width: 100%; /* Make the image full width */
+    height: auto; /* Maintain aspect ratio */
+    padding: 0; /* Remove extra padding */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for screens up to 768px wide (tablets) */
+  .container {
+    flex-direction: column; /* Stack sections vertically */
+  }
+  .gymImg {
+    width: 100%; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    padding: 0; /* Remove extra padding */
+  }
+  .form-range {
+    width: 100%; /* Make input range full width */
+  }
+}
+
+@media (max-width: 576px) {
+  /* Adjustments for screens up to 576px wide (phones) */
+  .navbar-nav {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center; /* Center align nav items */
+    padding-top: 1rem; /* Add spacing */
+  }
+  .gymImg {
+    width: 100%; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    padding: 0; /* Remove extra padding */
+    padding-top: 10px;
+  }
+  .container {
+    padding: 0 1rem; 
+  }
+}
