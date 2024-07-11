@@ -1,6 +1,6 @@
 const height = document.getElementById('customRange2');
 const weight = document.getElementById('customRange1');
-let genvalue = null
+let genvalue = "";
 height.addEventListener("input", function () {
     document.getElementById("height_display").innerHTML = height.value;
 });
@@ -14,7 +14,7 @@ function resetInp() {
     document.getElementById("condition").innerHTML = "Your Condition"
     height.value = 0;
     weight.value = 0;
-    let genvalue = null;
+    genvalue = "";
     var element = document.getElementById('condition')
     element.style.boxShadow = "0px 4px 1px -1px white";
     const radioButtons = document.querySelectorAll('input[type="radio"]');
@@ -29,7 +29,7 @@ function resetInp() {
     }
 function imputCalculate() {
     
-    if (height.value != 0 && weight.value != 0 && genvalue!=null) {
+    if (height.value != 0 && weight.value != 0 && genvalue!="") {
         let heightValue = parseFloat(height.value);
         let weightValue = parseFloat(weight.value);
         let squareOfHeight = (heightValue / 100) * (heightValue / 100);
